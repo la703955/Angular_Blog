@@ -1,0 +1,19 @@
+<ul [ngClass]="{'list-group-item': true,
+'list-group-item-success': verifLike() === true,
+'list-group-item-danger': verifLike() === false }">
+
+
+<h3 class="thick">{{post.title}}</h3> 
+<h3 class="date">{{ post.date | date: 'MM/dd/yyyy, H:mm a' | uppercase}}</h3>
+
+<br/>
+
+<p>{{post.content}}</p>
+
+<br/>
+<button class="btn btn-success" (click)="onLike()">Love</button>
+<button class="btn btn-danger" (click)="onDislike()">Dislike</button>
+
+</ul>
+
+
